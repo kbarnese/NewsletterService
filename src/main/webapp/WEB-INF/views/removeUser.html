@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Unsubsribe</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+
+
+<form th:action="@{/unsubscribe}" th:object="${user}" method="post">
+  <p>E-Mail Address: <input type="text" th:field="*{email}" /></p>
+
+  <p>
+    <input type="submit" value="Submit" />
+    <input type="reset" value="Reset" />
+  </p>
+</form>
+
+</body>
+</html>
